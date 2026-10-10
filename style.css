@@ -1,13 +1,420 @@
-h1 {
-    color:#f2f2f6;
-    font-family: verdana;
+
+*{
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+
 }
 
+body {
+    background: #0f172a;
+    margin: 0;
+    height: 100%;
+    /*overflow: hidden;*/
+}
+.container {
+    max-width: 1280px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 48px;
+}
+.layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.left {
+    width: 48%;
+
+    position: sticky;
+    top: 0;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 96px 0;
+}
+
+
+.right {
+    width: 52%;
+    padding: 96px 0;
+}
+
+
+h1 {
+    color: #e2e8f0;
+    font-size: 48px;
+    margin: 0;
+        font-weight: 700;
+
+
+
+}
+h4 {
+    color: #e2e8f0;
+    font-size: 18px;
+    margin-top: 12px;
+    font-weight: 500;
+
+}
+
+
 p{
-    color:#f2f2f6;
+    color:#94a3b8;
+    font-weight: lighter;
+
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    opacity: 0.65;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.socials a:hover img {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+.socials img.mail{
+    width: 30px;
+    height: 30px;
 }
 
 img {
      width:50px;
      height:50px;
+}
+
+.navigation {
+    margin-top: 80px;
+}
+
+.navigation a {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    margin-bottom: 28px;
+
+    text-decoration: none;
+}
+
+.nav-line {
+    width: 32px;
+    height: 1px;
+    background-color: #64748b;
+
+    transition: 0.2s ease;
+}
+
+.nav-text {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.navigation a:hover .nav-line {
+    width: 64px;
+    background-color: #e2e8f0;
+}
+
+.navigation a:hover .nav-text {
+    color: #e2e8f0;
+}
+
+.about {
+    max-width: 650px;
+        margin-bottom: 120px;
+
+}
+
+.about p {
+    margin: 0 0 16px 0;
+
+    color: #94a3b8;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* =========================
+   EXPERIENCE
+   ========================= */
+
+.experience {
+    width: 100%;
+}
+
+/* Each job */
+.experience-item {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 24px;
+
+    padding: 16px 24px;
+    margin: 0 -24px 48px;
+
+    border-radius: 6px;
+
+    transition: background-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/* Hover card */
+.experience-item:hover {
+    background-color: rgba(30, 41, 59, 0.5);
+
+    box-shadow:
+        inset 0 1px 0 0 rgba(148, 163, 184, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   DATE
+   ========================= */
+
+.date {
+    padding-top: 4px;
+
+    color: #64748b;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.experience-content {
+    min-width: 0;
+}
+
+
+/* Job title */
+
+.experience-content h3 {
+    margin: 0;
+
+    color: #e2e8f0;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+/* Company / link hover */
+
+.experience-content h3:hover {
+    color: #5eead4;
+}
+
+
+/* Previous job titles */
+
+.previous-title {
+    color: #64748b;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+
+/* =========================
+   DESCRIPTION
+   ========================= */
+
+.experience-content p {
+    margin: 12px 0 0;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   SKILLS
+   ========================= */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 16px;
+}
+
+.skills span {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 12px;
+
+    border-radius: 999px;
+
+    background: rgba(45, 212, 191, 0.1);
+
+    color: #5eead4;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+
+/* =========================
+   LINK / ARROW
+   ========================= */
+
+.experience-content a {
+    color: #e2e8f0;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.experience-content a:hover {
+    color: #5eead4;
+}
+
+.projects {
+    width: 100%;
+    margin-bottom: 120px;
+}
+
+.project-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 24px;
+
+    padding: 16px 24px;
+    margin: 0 -24px 48px;
+
+    border-radius: 6px;
+
+    transition: background-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.project-item:hover {
+    background-color: rgba(30, 41, 59, 0.5);
+
+    box-shadow:
+        inset 0 1px 0 0 rgba(148, 163, 184, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.project-image img {
+    width: 144px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.project-content h3 {
+    margin: 0;
+    color: #e2e8f0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.project-content h3:hover {
+    color: #5eead4;
+}
+
+.project-content p {
+    margin: 12px 0 0;
+
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.resume {
+    display: inline-block;
+
+    margin-top: 20px;
+    margin-bottom: 90px;
+
+    color: #e2e8f0;
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.resume:hover {
+    color: #5eead4;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .experience-item {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+        padding: 20px;
+        margin: 0 0 40px;
+    }
+
+    .date {
+        padding-top: 0;
+
+        font-size: 11px;
+    }
+
+    .experience-content h3 {
+        font-size: 16px;
+    }
+
+    .experience-content p {
+        font-size: 14px;
+    }
+
+    .skills {
+        margin-top: 14px;
+    }
 }
